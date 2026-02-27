@@ -1,4 +1,4 @@
-import java.util.*;
+ import java.util.*;
 
 class Taxi {
     int id;
@@ -17,11 +17,11 @@ class Taxi {
         Booking lastBooking = bookings.get(bookings.size() - 1);
         return lastBooking.dropTime <= requestTime;
     }
-
-    public int earnings(char from, char to) {
-        int distance = Math.abs(to - from) * 15;
-        return 100 + Math.max(0, (distance - 5) * 10);
-    }
+	
+	    public int earnings(char from, char to) {
+	        int distance = Math.abs(to - from) * 15;
+	        return 100 + Math.max(0, (distance - 5) * 10);
+	    }
 
     public void addBooking(Booking booking) {
         bookings.add(booking);
