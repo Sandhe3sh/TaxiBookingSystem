@@ -144,7 +144,7 @@ public class TaxiBookingSystem {
             }
         }
     }
-
+    
     public static void initializeTaxis(int n) {
         for (int i = 1; i <= n; i++) {
             taxis.add(new Taxi(i));
@@ -176,7 +176,7 @@ public class TaxiBookingSystem {
                 if (selectedTaxi == null ||
                         distance < minDistance ||
                         (distance == minDistance &&
-                                taxi.totalEarnings < selectedTaxi.totalEarnings)) {
+                                taxi.totalEarning < selectedTaxi.totalEarning)) {
 
                     selectedTaxi = taxi;
                     minDistance = distance;
@@ -218,7 +218,7 @@ public class TaxiBookingSystem {
         for (Taxi taxi : taxis) {
 
             System.out.println("\nTaxi-" + taxi.id +
-                    " Total Earnings: Rs." + taxi.totalEarnings);
+                    " Total Earnings: Rs." + taxi.totalEarning);
 
             System.out.printf("%-10s %-10s %-5s %-5s %-12s %-9s %-6s%n",
                     "BookingID", "CustomerID", "From", "To",

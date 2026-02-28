@@ -3,7 +3,7 @@
 class Taxi {
     int id;
     char currentPoint = 'A';
-    int totalEarnings = 0;
+    int totalEarning = 0;
     List<Booking> bookings = new ArrayList<>();
 
     public Taxi(int id) {
@@ -25,7 +25,7 @@ class Taxi {
 
     public void addBooking(Booking booking) {
         bookings.add(booking);
-        totalEarnings += booking.amount;
+        totalEarning += booking.amount;
         currentPoint = booking.to;
     }
 }
